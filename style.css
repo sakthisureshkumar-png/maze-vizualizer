@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #111;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+button, select {
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(30, 20px); /* 30 columns */
+  grid-template-rows: repeat(20, 20px);   /* 20 rows */
+  gap: 1px;
+  background: #333;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  background: #222;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+/* Different states */
+.cell.start {
+  background: #2ecc71; /* green */
+}
+
+.cell.end {
+  background: #e74c3c; /* red */
+}
+
+.cell.wall {
+  background: #555;
+}
+
+.cell.visited {
+  background: #3498db; /* blue */
+}
+
+.cell.path {
+  background: #f1c40f; /* yellow */
+}
