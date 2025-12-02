@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Maze Pathfinding Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Maze / Pathfinding Visualizer</h1>
+  </header>
+
+  <div class="controls">
+    <label>Algorithm:
+      <select id="algorithm-select">
+        <option value="bfs">Breadth-First Search (BFS)</option>
+      </select>
+    </label>
+
+    <button id="clear-grid">Clear Grid</button>
+    <button id="start-search">Start Search</button>
+  </div>
+
+  <main>
+    <div id="grid-container"></div>
+  </main>
+
+  <footer>
+    <p>Left click: walls | S: Start | E: End</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
